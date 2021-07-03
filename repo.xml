@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>ukui</name>
+    <description>overlay of UKUI desktop environment</description></description>
+    <homepage>https://www.ukui.org/</homepage>
+    <owner type="project">
+      <email>OriPoin@outlook.com</email>
+      <name>ukui</name>
+    </owner>
+    <source type="git">https://github.com/ukui/gentoo-overlay.git</source>
+  </repo>
+</repositories>
