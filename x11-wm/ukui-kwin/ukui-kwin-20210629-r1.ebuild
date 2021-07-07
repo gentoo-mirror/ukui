@@ -3,21 +3,19 @@
 
 EAPI=7
 
-ECM_HANDBOOK="optional"
-ECM_TEST="optional"
-VIRTUALX_REQUIRED="test"
-inherit ecm kde.org optfeature
+inherit cmake-utils
 
 MY_COMMIT="17cc806fadde24275980043c8062965282d8ed39"
 DESCRIPTION="The window manager for UKUI desktop environment."
 HOMEPAGE="https://github.com/ukui/ukui-kwin"
 SRC_URI="https://github.com/ukui/ukui-kwin/archive/${MY_COMMIT}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${PN}-${MY_COMMIT}"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT+=" test"
+IUSE="test"
 
 KFMIN=5.66.0
 QTV5=5.18.3
@@ -98,19 +96,17 @@ DEPEND="${COMMON_DEPEND}
 		>=dev-qt/qtwayland-${QTMIN}:5
 	)
 "
+
 PDEPEND="
 	>=kde-plasma/kde-cli-tools-${QTV5}:5
 "
 
-src_prepare() {
-	ecm_src_prepare
-}
+PATCHES=(
+	"${FILESDIR}/requestShowWindowMenu_deprecated.patch"
+	"${FILESDIR}/plugins_kdecorations_ukui_test.patch"
+)
 
-src_configure() {
-	ecm_src_configure
-}
-
-pkg_postinst() {
-	ecm_pkg_postinst
-	optfeature "color management support" x11-misc/colord
+src_install() {
+	cmake-utils_src_install "$@"
+	rm "${D}/usr/share/locale/tr/LC_MESSAGES/kwin.mo"
 }

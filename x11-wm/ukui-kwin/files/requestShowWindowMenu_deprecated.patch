@@ -1,0 +1,58 @@
+diff --git a/decorations/decoratedclient.cpp b/decorations/decoratedclient.cpp
+index 6e150d8..a708d3c 100644
+--- a/decorations/decoratedclient.cpp
++++ b/decorations/decoratedclient.cpp
+@@ -238,10 +238,9 @@ void DecoratedClientImpl::requestHideToolTip()
+     m_toolTipShowing = false;
+ }
+ 
+-void DecoratedClientImpl::requestShowWindowMenu()
++void DecoratedClientImpl::requestShowWindowMenu(const QRect &rect)
+ {
+-    // TODO: add rect to requestShowWindowMenu
+-    Workspace::self()->showWindowMenu(QRect(Cursor::pos(), Cursor::pos()), m_client);
++    Workspace::self()->showWindowMenu(QRect(m_client->pos() + rect.topLeft(), m_client->pos() + rect.bottomRight()), m_client);
+ }
+ 
+ void DecoratedClientImpl::requestShowApplicationMenu(const QRect &rect, int actionId)
+diff --git a/decorations/decoratedclient.h b/decorations/decoratedclient.h
+index 576b62c..1675751 100644
+--- a/decorations/decoratedclient.h
++++ b/decorations/decoratedclient.h
+@@ -81,7 +81,7 @@ public:
+     void requestContextHelp() override;
+     void requestToggleMaximization(Qt::MouseButtons buttons) override;
+     void requestMinimize() override;
+-    void requestShowWindowMenu() override;
++    void requestShowWindowMenu(const QRect &rect) override;
+     void requestShowApplicationMenu(const QRect &rect, int actionId) override;
+     void requestToggleKeepAbove() override;
+     void requestToggleKeepBelow() override;
+diff --git a/kcmkwin/kwindecoration/declarative-plugin/previewclient.cpp b/kcmkwin/kwindecoration/declarative-plugin/previewclient.cpp
+index 8319ccb..8e7ea1c 100644
+--- a/kcmkwin/kwindecoration/declarative-plugin/previewclient.cpp
++++ b/kcmkwin/kwindecoration/declarative-plugin/previewclient.cpp
+@@ -405,8 +405,9 @@ void PreviewClient::requestToggleKeepBelow()
+     setKeepBelow(!isKeepBelow());
+ }
+ 
+-void PreviewClient::requestShowWindowMenu()
++void PreviewClient::requestShowWindowMenu(const QRect &rect)
+ {
++    Q_UNUSED(rect);
+     emit showWindowMenuRequested();
+ }
+ 
+diff --git a/kcmkwin/kwindecoration/declarative-plugin/previewclient.h b/kcmkwin/kwindecoration/declarative-plugin/previewclient.h
+index c37db74..fe043db 100644
+--- a/kcmkwin/kwindecoration/declarative-plugin/previewclient.h
++++ b/kcmkwin/kwindecoration/declarative-plugin/previewclient.h
+@@ -107,7 +107,7 @@ public:
+     void requestToggleKeepAbove() override;
+     void requestToggleKeepBelow() override;
+     void requestToggleShade() override;
+-    void requestShowWindowMenu() override;
++    void requestShowWindowMenu(const QRect &rect) override;
+     void requestShowApplicationMenu(const QRect &rect, int actionId) override;
+     void requestToggleOnAllDesktops() override;
+ 
