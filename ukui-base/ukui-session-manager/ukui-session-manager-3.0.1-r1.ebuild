@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils
+inherit cmake
 
 DESCRIPTION="ukui-session-manager"
 HOMEPAGE="https://github.com/ukui/ukui-session-manager"
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-		dev-qt/linguist-tools
 		dev-qt/qtcore
 		dev-qt/qtdbus
 		dev-qt/qtmultimedia
@@ -22,7 +21,10 @@ DEPEND="
 		dev-qt/qtx11extras
 		kde-frameworks/kidletime
 		x11-libs/gsettings-qt
+		x11-libs/libX11
 		x11-libs/libxcb
-		x11-libs/libXtst"
-RDEPEND="${DEPEND}"
+		x11-libs/libXtst
+		x11-misc/xdg-user-dirs"
+RDEPEND="${DEPEND}
+		ukui-base/ukui-themes"
 BDEPEND=""

@@ -13,18 +13,20 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="x11-misc/lightdm[qt5]
-		media-libs/imlib2
-		dev-qt/qtx11extras
-		x11-libs/libXtst
-		x11-base/xorg-server
+DEPEND="
 		dev-qt/qtcore
 		dev-qt/qtgui
-		dev-qt/qtsvg"
-RDEPEND="x11-misc/lightdm[qt5]
-		media-libs/imlib2
 		dev-qt/qtx11extras
-		x11-libs/libXtst"
+		dev-qt/qtsvg
+		dev-qt/qtwidgets
+		media-libs/imlib2
+		x11-base/xorg-server
+		x11-libs/libX11
+		x11-libs/libXrandr
+		x11-libs/libXtst
+		x11-misc/lightdm[qt5]
+		"
+RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_prepare() {

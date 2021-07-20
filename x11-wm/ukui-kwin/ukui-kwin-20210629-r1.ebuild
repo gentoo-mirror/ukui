@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils
+inherit cmake
 
 MY_COMMIT="17cc806fadde24275980043c8062965282d8ed39"
 DESCRIPTION="The window manager for UKUI desktop environment."
@@ -40,11 +40,13 @@ COMMON_DEPEND="
 	>=kde-frameworks/kcoreaddons-${KFMIN}:5
 	>=kde-frameworks/kcrash-${KFMIN}:5
 	>=kde-frameworks/kdeclarative-${KFMIN}:5
+	>=kde-frameworks/kdoctools-${KFMIN}:5
 	>=kde-frameworks/kglobalaccel-${KFMIN}:5=
 	>=kde-frameworks/kguiaddons-${KFMIN}:5
 	>=kde-frameworks/ki18n-${KFMIN}:5
 	>=kde-frameworks/kiconthemes-${KFMIN}:5
 	>=kde-frameworks/kidletime-${KFMIN}:5=
+	>=kde-frameworks/kinit-${KFMIN}:5=
 	>=kde-frameworks/kio-${KFMIN}:5
 	>=kde-frameworks/knewstuff-${KFMIN}:5
 	>=kde-frameworks/knotifications-${KFMIN}:5
@@ -65,18 +67,20 @@ COMMON_DEPEND="
 	media-libs/lcms:2
 	media-libs/libepoxy
 	media-libs/mesa[egl,gbm,wayland,X(+)]
+	sys-libs/libcap
 	virtual/libudev:=
 	x11-libs/gsettings-qt
+	x11-libs/libdrm
+	x11-libs/libICE
+	x11-libs/libSM
 	x11-libs/libX11
 	x11-libs/libXi
-	x11-libs/libdrm
 	>=x11-libs/libxcb-1.10
 	>=x11-libs/libxkbcommon-0.7.0
 	x11-libs/xcb-util-cursor
 	x11-libs/xcb-util-image
 	x11-libs/xcb-util-keysyms
 	x11-libs/xcb-util-wm
-	sys-libs/libcap
 "
 # TODO: sys-apps/hwdata? not packaged yet; commit 33a1777a, Gentoo-bug 717216
 RDEPEND="${COMMON_DEPEND}
@@ -107,6 +111,6 @@ PATCHES=(
 )
 
 src_install() {
-	cmake-utils_src_install "$@"
+	cmake_src_install "$@"
 	rm "${D}/usr/share/locale/tr/LC_MESSAGES/kwin.mo"
 }
