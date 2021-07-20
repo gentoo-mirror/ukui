@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-		dev-qt/linguist-tools
 		dev-qt/qdbus
 		dev-qt/qtcore
 		dev-qt/qtwidgets

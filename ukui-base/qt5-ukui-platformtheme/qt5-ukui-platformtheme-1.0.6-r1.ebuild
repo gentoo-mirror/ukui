@@ -23,7 +23,6 @@ DEPEND="
 		dev-qt/qtx11extras
 		kde-frameworks/kwayland
 		kde-frameworks/kwindowsystem
-		virtual/pkgconfig
 		x11-libs/gsettings-qt
 		x11-libs/libxcb
 		x11-libs/libXtst"
