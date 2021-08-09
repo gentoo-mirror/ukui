@@ -20,7 +20,6 @@ DEPEND="
 		dev-qt/qtscript
 		dev-qt/qtsensors
 		dev-qt/qtwidgets
-		dev-qt/qtwebkit
 		dev-qt/qtx11extras
 		dev-libs/glib
 		dev-libs/libdbusmenu-qt
