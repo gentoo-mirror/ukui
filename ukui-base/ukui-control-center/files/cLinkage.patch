@@ -1,0 +1,20 @@
+diff --git a/plugins/account/userinfo/run-passwd.cpp b/plugins/account/userinfo/run-passwd.cpp
+index 6407929..80da0d0 100644
+--- a/plugins/account/userinfo/run-passwd.cpp
++++ b/plugins/account/userinfo/run-passwd.cpp
+@@ -7,7 +7,6 @@
+ #undef signals
+ #endif
+ 
+-extern "C" {
+ #include <glib.h>
+ #include <gio/gio.h>
+ 
+@@ -16,7 +15,6 @@ extern "C" {
+ #include <errno.h>
+ #include <sys/wait.h>
+ 
+-}
+ 
+ #include "run-passwd.h"
+ 
