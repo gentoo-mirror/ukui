@@ -1,4 +1,7 @@
-x11-misc
-x11-wm
-x11-libs
+gnome-base
+metadata
 ukui-base
+x11-libs
+x11-misc
+x11-themes
+x11-wm

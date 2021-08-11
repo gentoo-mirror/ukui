@@ -9,7 +9,7 @@ DESCRIPTION="Daemon in the UKUI desktop environment"
 HOMEPAGE="https://github.com/ukui/ukui-settings-daemon"
 SRC_URI="https://github.com/ukui/ukui-settings-daemon/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE=""
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
@@ -36,12 +36,11 @@ DEPEND="
 		x11-misc/colord
 		x11-libs/gsettings-qt
 		x11-libs/libnotify
-		x11-libs/libwnck
+		x11-libs/libwnck:3
 		x11-libs/libxklavier
 		x11-libs/libXtst
 		"
 RDEPEND="
-		${DEPEND}
 		x11-misc/imwheel
 		mate-base/mate-common
 		ukui-base/ukui-biometric-auth

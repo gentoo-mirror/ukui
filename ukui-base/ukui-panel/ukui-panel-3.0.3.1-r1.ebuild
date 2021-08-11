@@ -49,4 +49,3 @@ src_prepare() {
 	cmake "../"
 	S="${S}/build"
 }
-

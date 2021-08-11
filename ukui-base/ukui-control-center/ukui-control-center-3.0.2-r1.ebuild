@@ -45,7 +45,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 PATCHES=(
-	${FILESDIR}/cLinkage.patch
+	"${FILESDIR}/cLinkage.patch"
 )
 
 src_prepare() {
@@ -56,4 +56,3 @@ src_prepare() {
 src_install() {
 	emake INSTALL_ROOT="${D}" install
 }
-

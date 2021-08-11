@@ -28,14 +28,14 @@ DEPEND="
 		sys-devel/libtool
 		sys-power/upower
 		x11-libs/libnotify
-		x11-libs/libwnck
+		x11-libs/libwnck:3
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXrandr
 		x11-libs/gtk+:3
 		x11-libs/gsettings-qt
 		"
-RDEPEND="${DEPEND}
+RDEPEND="
 		sys-auth/polkit
 		sys-apps/dbus[X]
 		|| ( x11-misc/notification-daemon x11-misc/mate-notification-daemon )

@@ -16,18 +16,17 @@ KEYWORDS="~amd64"
 DEPEND="
 		dev-libs/glib
 		dev-libs/libxml2
-		dev-util/intltool
 		dev-qt/qtmultimedia
 		dev-qt/qtsvg
+		dev-util/intltool
 		kde-frameworks/kwindowsystem
 		mate-base/mate-common
 		mate-base/mate-desktop
 		media-libs/libcanberra
 		media-libs/libmatemixer
-		ukui-base/ukui-interface
 		x11-libs/gsettings-qt
-		x11-libs/gtk+"
-RDEPEND="${DEPEND}"
+		x11-libs/gtk+:3"
+RDEPEND="ukui-base/ukui-interface"
 BDEPEND=""
 
 src_prepare() {
@@ -51,4 +50,3 @@ src_install() {
 	cd ukui-volume-control-applet-qt
 	emake INSTALL_ROOT="${D}" install
 }
-

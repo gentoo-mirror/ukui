@@ -5,7 +5,7 @@ EAPI=7
 
 inherit gnome.org vala
 
-DESCRIPTION="gnome-keyring is a program that keep password and other secrets for users.(deprecated)"
+DESCRIPTION="keep password and other secrets for users.(deprecated)"
 HOMEPAGE="https://gitlab.gnome.org/GNOME/libgnome-keyring"
 
 LICENSE="GPL-2"
@@ -15,15 +15,16 @@ KEYWORDS="~amd64"
 DEPEND="
 		dev-libs/glib
 		dev-libs/libgcrypt
-		sys-apps/dbus
-		gnome-base/gnome-keyring
-		dev-libs/gobject-introspection
 		dev-util/gtk-doc-am
 		dev-util/intltool
-		sys-devel/gettext
 		virtual/pkgconfig
 		"
-RDEPEND="${DEPEND}"
+RDEPEND="
+		dev-libs/gobject-introspection
+		gnome-base/gnome-keyring
+		sys-apps/dbus
+		sys-devel/gettext
+		"
 BDEPEND=""
 
 src_prepare() {
