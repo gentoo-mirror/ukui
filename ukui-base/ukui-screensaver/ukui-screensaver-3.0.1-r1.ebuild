@@ -25,6 +25,7 @@ CMAKE_IN_SOURCE_BUILD="yes"
 
 src_prepare() {
 	default
+	cp /etc/pam.d/login $pkgname-$pkgver/data/ukui-screensaver-qt
 	mkdir build
 	BUILD_DIR="${S}/build"
 	cmake_src_prepare
