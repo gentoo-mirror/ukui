@@ -43,6 +43,7 @@ RDEPEND="${DEPEND}
 BDEPEND=""
 
 src_prepare() {
+	eapply_user
 	NOCONFIGURE=1 ./autogen.sh || die
 	econf --prefix=/usr --libexecdir=/usr/lib/${PN} --sbindir=/usr/bin --sysconfdir=/etc
 }

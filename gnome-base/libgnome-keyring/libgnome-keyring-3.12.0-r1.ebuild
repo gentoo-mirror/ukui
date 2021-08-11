@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_prepare() {
+	eapply_user
 	NOCONFIGURE=1 ./autogen.sh
 }
 
@@ -36,8 +37,7 @@ src_configure() {
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--disable-static \
-		--libexecdir=/usr/lib \
-		--enable-gtk-doc
+		--libexecdir=/usr/lib
 }
 
 src_compile() {
