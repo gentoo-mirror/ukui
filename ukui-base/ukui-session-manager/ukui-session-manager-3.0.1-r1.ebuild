@@ -26,5 +26,5 @@ DEPEND="
 		x11-libs/libXtst
 		x11-misc/xdg-user-dirs"
 RDEPEND="${DEPEND}
-		ukui-base/ukui-themes"
+		x11-themes/ukui-themes"
 BDEPEND=""
