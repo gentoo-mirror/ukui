@@ -22,7 +22,7 @@ Gentoo overlay for UKUI desktop environment
 - [X] ukui-biometric-auth
 - [X] ukui-kwin
 - [ ] ukwm (ukui-kwin fullback without Gaussian blur )
-- [ ] ukui-window-switch
+- [X] ukui-window-switch
 - [X] qt5-ukui-platformtheme
 - [X] ukui-themes
 - [X] ukui-wallpapers
