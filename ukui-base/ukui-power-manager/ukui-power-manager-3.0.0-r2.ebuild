@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit gnome2-utils xdg
+
 DESCRIPTION="UKUI session daemon that acts as a policy agent on top of UPower"
 HOMEPAGE="https://github.com/ukui/ukui-power-manager"
 SRC_URI="https://github.com/ukui/ukui-power-manager/archive/v${PV}.tar.gz -> ${P}.tar.gz"
@@ -46,6 +48,7 @@ src_prepare() {
 	eapply_user
 	NOCONFIGURE=1 ./autogen.sh || die
 	econf --prefix=/usr --libexecdir=/usr/lib/${PN} --sbindir=/usr/bin --sysconfdir=/etc
+	xdg_src_prepare
 }
 
 src_compile() {
@@ -54,4 +57,14 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+	gnome2_schemas_update
+}
+
+pkg_postrm() {
+	xdg_pkg_postrm
+	gnome2_schemas_update
 }
