@@ -10,7 +10,7 @@ Gentoo overlay for UKUI desktop environment
 - [ ] peony-extensions
 - [X] ukui-menu
 - [X] ukui-panel
-- [ ] ukui-sidebar
+- [X] ukui-sidebar
 - [X] ukui-media
 - [X] ukui-greeter
 - [X] ukui-screensaver
