@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake
+inherit gnome2-utils xdg cmake
 
 DESCRIPTION="Screensaver for UKUI desktop environment"
 HOMEPAGE="https://github.com/ukui/ukui-screensaver"
@@ -25,7 +25,7 @@ CMAKE_IN_SOURCE_BUILD="yes"
 
 src_prepare() {
 	default
-	cp /etc/pam.d/login $pkgname-$pkgver/data/ukui-screensaver-qt
+	cp /etc/pam.d/login ${S}/data/ukui-screensaver-qt
 	mkdir build
 	BUILD_DIR="${S}/build"
 	cmake_src_prepare
@@ -44,4 +44,14 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+	gnome2_schemas_update
+}
+
+pkg_postrm() {
+	xdg_pkg_postrm
+	gnome2_schemas_update
 }

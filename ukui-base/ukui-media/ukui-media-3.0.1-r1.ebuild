@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit qmake-utils
+inherit gnome2-utils qmake-utils
 
 DESCRIPTION="media tools for UKUI"
 HOMEPAGE="https://github.com/ukui/ukui-media"
@@ -49,4 +49,14 @@ src_install() {
 	emake DESTDIR="${D}" install
 	cd ukui-volume-control-applet-qt
 	emake INSTALL_ROOT="${D}" install
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+	gnome2_schemas_update
+}
+
+pkg_postrm() {
+	xdg_pkg_postrm
+	gnome2_schemas_update
 }

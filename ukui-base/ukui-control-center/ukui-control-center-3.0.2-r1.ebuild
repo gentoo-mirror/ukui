@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit qmake-utils
+inherit gnome2-utils xdg qmake-utils
 
 DESCRIPTION="media tools for UKUI"
 HOMEPAGE="https://github.com/ukui/ukui-control-center"
@@ -55,4 +55,14 @@ src_prepare() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+	gnome2_schemas_update
+}
+
+pkg_postrm() {
+	xdg_pkg_postrm
+	gnome2_schemas_update
 }

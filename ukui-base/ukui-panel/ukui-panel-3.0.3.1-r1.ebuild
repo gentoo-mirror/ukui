@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake
+inherit gnome2-utils xdg cmake
 
 DESCRIPTION="The taskbar of UKUI"
 HOMEPAGE="https://github.com/ukui/ukui-panel"
@@ -45,7 +45,23 @@ src_prepare() {
 	default
 	cmake_src_prepare
 	mkdir build
+}
+
+src_configure() {
 	cd build
-	cmake "../"
+	local mycmakeargs=(
+		-DCALENDAR_PLUGIN=NO
+	)
+	cmake_src_configure
 	S="${S}/build"
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+	gnome2_schemas_update
+}
+
+pkg_postrm() {
+	xdg_pkg_postrm
+	gnome2_schemas_update
 }

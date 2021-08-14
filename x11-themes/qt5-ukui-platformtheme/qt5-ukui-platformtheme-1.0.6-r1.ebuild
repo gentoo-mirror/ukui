@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit qmake-utils
+inherit gnome2-utils xdg qmake-utils
 
 DESCRIPTION="The UKUI platform theme for qt5 QPA."
 HOMEPAGE="https://github.com/ukui/qt5-ukui-platformtheme"
@@ -36,4 +36,14 @@ src_prepare() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+	gnome2_schemas_update
+}
+
+pkg_postrm() {
+	xdg_pkg_postrm
+	gnome2_schemas_update
 }

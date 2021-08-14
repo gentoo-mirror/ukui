@@ -62,6 +62,7 @@ COMMON_DEPEND="
 	>=kde-plasma/kdecoration-${QTV5}:5
 	>=kde-plasma/kscreenlocker-${QTV5}:5
 	>=kde-plasma/kwayland-server-${QTV5}:5
+	>=kde-plasma/kwin-${QTV5}:5
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/lcms:2
