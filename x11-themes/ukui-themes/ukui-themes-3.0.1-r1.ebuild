@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit gnome2-utils gnome2-utils xdg meson
+inherit gnome2-utils xdg meson
 
 DESCRIPTION="The theme collections of UKUI."
 HOMEPAGE="https://github.com/ukui/ukui-themes"
@@ -16,16 +16,6 @@ KEYWORDS="~amd64"
 DEPEND="dev-ruby/sass:="
 RDEPEND="${DEPEND}"
 BDEPEND=""
-
-pkg_postinst() {
-	xdg_pkg_postinst
-	gnome2_schemas_update
-}
-
-pkg_postrm() {
-	xdg_pkg_postrm
-	gnome2_schemas_update
-}
 
 pkg_postinst() {
 	xdg_pkg_postinst
