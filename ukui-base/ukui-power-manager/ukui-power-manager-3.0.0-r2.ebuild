@@ -40,7 +40,7 @@ DEPEND="
 RDEPEND="
 		sys-auth/polkit
 		sys-apps/dbus[X]
-		|| ( x11-misc/notification-daemon x11-misc/mate-notification-daemon )
+		|| ( x11-misc/ukui-notification-daemon x11-misc/notification-daemon x11-misc/mate-notification-daemon )
 		|| ( sys-apps/systemd sys-auth/elogind )"
 BDEPEND=""
 
