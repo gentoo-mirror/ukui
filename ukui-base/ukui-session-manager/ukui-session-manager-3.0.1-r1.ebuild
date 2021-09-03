@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake
+inherit gnome2-utils cmake
 
 DESCRIPTION="ukui-session-manager"
 HOMEPAGE="https://github.com/ukui/ukui-session-manager"
@@ -28,3 +28,11 @@ DEPEND="
 RDEPEND="${DEPEND}
 		x11-themes/ukui-themes"
 BDEPEND=""
+
+pkg_postinst() {
+	gnome2_schemas_update
+}
+
+pkg_postrm() {
+	gnome2_schemas_update
+}
