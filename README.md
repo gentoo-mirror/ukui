@@ -39,7 +39,6 @@ You can add this overlay and then emerge ukui-meta package to use a mininal UKUI
 - [x] ukui-system-monitor
 - [ ] libinput-touch-translator
 - [ ] biometric-authentication
-- [ ] ukui-paste
 
 ## Extra packages from Ubuntu Kylin
 
@@ -54,4 +53,3 @@ You can add this overlay and then emerge ukui-meta package to use a mininal UKUI
 
 - [ ] kylin-video
 - [ ] indicator-china-weather
-- [ ] fcitx-qimpanel
