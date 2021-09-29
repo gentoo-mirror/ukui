@@ -14,18 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-		app-i18n/uchardet
-		dev-libs/glib
-		dev-qt/qtcore
-		dev-qt/qtdbus
-		dev-qt/qtsvg
-		dev-qt/qtx11extras
-		kde-frameworks/kwindowsystem
-		ukui-base/ukui-interface
-		x11-libs/bamf
-		x11-libs/gsettings-qt"
+	app-i18n/uchardet
+	dev-qt/linguist-tools
+	dev-qt/qtcore
+	dev-qt/qtdbus
+	dev-qt/qtsql
+	dev-qt/qtsvg
+	dev-qt/qtx11extras
+	kde-frameworks/kwindowsystem
+	ukui-base/ukui-interface
+	x11-libs/bamf
+	x11-libs/gsettings-qt
+	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_prepare() {
 	eqmake5
