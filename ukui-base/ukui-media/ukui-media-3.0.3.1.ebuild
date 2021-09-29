@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit gnome2-utils qmake-utils
+inherit gnome2-utils qmake-utils xdg-utils
 
 DESCRIPTION="media tools for UKUI"
 HOMEPAGE="https://github.com/ukui/ukui-media"
@@ -14,18 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-		dev-libs/glib
-		dev-libs/libxml2
-		dev-qt/qtmultimedia
-		dev-qt/qtsvg
-		dev-util/intltool
-		kde-frameworks/kwindowsystem
-		mate-base/mate-common
-		mate-base/mate-desktop
-		media-libs/libcanberra
-		media-libs/libmatemixer
-		x11-libs/gsettings-qt
-		x11-libs/gtk+:3"
+	dev-libs/libxml2
+	dev-qt/qtmultimedia
+	dev-qt/qtsvg
+	dev-util/intltool
+	kde-frameworks/kwindowsystem
+	mate-base/mate-common
+	mate-base/mate-desktop
+	media-libs/libcanberra
+	media-libs/libmatemixer
+	media-sound/pulseaudio
+	x11-libs/gsettings-qt
+	x11-libs/gtk+:3
+	"
 RDEPEND="ukui-base/ukui-interface"
 BDEPEND=""
 
@@ -36,18 +37,18 @@ src_prepare() {
 
 src_configure() {
 	econf --prefix="/usr" --libexecdir="/usr/lib/${PN}"  --sysconfdir="/etc"
-	cd ukui-volume-control-applet-qt
-	qmake PREFIX="/usr/share/${PN}"
+	cd ukui-volume-control-applet-qt || die
+	eqmake5 PREFIX="/usr/share/${PN}"
 }
 src_compile(){
 	emake "$@"
-	cd ukui-volume-control-applet-qt
+	cd ukui-volume-control-applet-qt || die
 	emake
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
-	cd ukui-volume-control-applet-qt
+	cd ukui-volume-control-applet-qt || die
 	emake INSTALL_ROOT="${D}" install
 }
 
