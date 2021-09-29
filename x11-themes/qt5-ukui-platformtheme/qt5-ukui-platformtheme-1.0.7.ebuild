@@ -12,26 +12,23 @@ SRC_URI="https://github.com/ukui/qt5-ukui-platformtheme/archive/v${PV}.tar.gz ->
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-
+IUSE="test"
 DEPEND="
-		dev-libs/glib
-		dev-qt/qtchooser
-		dev-qt/qtcore
-		dev-qt/qtdbus
-		dev-qt/qtmultimedia
-		dev-qt/qtwidgets
-		dev-qt/qtx11extras
-		kde-frameworks/kwayland
-		kde-frameworks/kwindowsystem
-		x11-libs/gsettings-qt
-		x11-libs/libxcb
-		x11-libs/libXtst"
+	dev-qt/qtconcurrent
+	dev-qt/qtx11extras
+	kde-frameworks/kwayland
+	kde-frameworks/kwindowsystem
+	x11-libs/gsettings-qt
+	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_prepare() {
 	eqmake5
 	default
+	if ! use test; then
+		sed -i 's/test//g' "${S}/qt5-ukui.pro"
+	fi
 }
 
 src_install() {
