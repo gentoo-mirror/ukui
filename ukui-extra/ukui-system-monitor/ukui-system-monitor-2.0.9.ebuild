@@ -14,19 +14,25 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-		dev-libs/glib
-		dev-qt/qtcore
-		dev-qt/qtscript
-		dev-qt/qtsvg
-		dev-qt/qtx11extras
-		gnome-base/libgtop
-		kde-frameworks/kwindowsystem
-		net-libs/libpcap
-		x11-libs/gsettings-qt
-		sys-apps/systemd
-		"
+	dev-libs/glib
+	dev-qt/qtcharts
+	dev-qt/qtcore
+	dev-qt/qtscript
+	dev-qt/qtsvg
+	dev-qt/qtx11extras
+	gnome-base/libgtop
+	kde-frameworks/kwindowsystem
+	net-libs/libpcap
+	x11-libs/gsettings-qt
+	sys-apps/systemd
+	ukui-base/ukui-interface
+	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+PATCHES=(
+	"${FILESDIR}/HeaderMissing.patch"
+)
 
 src_prepare() {
 	eqmake5

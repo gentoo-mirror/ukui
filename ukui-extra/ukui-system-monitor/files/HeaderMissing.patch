@@ -1,0 +1,11 @@
+--- a/src/style/usmproxystyle.cpp
++++ b/src/style/usmproxystyle.cpp
+@@ -1,6 +1,7 @@
+ #include "usmproxystyle.h"
+ 
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QStyleOption>
+ #include <QStyle>
+ #include <QDebug>
+
