@@ -31,11 +31,11 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_configure() {
-	qmake
+	eqmake5
 }
 
 src_compile() {
-	emake
+	emake "$@"
 }
 
 src_install() {
