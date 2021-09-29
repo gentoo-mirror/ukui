@@ -21,13 +21,10 @@ DEPEND="
 		dev-qt/qtsensors
 		dev-qt/qtwidgets
 		dev-qt/qtx11extras
-		dev-libs/glib
 		dev-libs/libdbusmenu-qt
 		dev-libs/libqtxdg
-		dev-libs/icu
 		gnome-base/dconf
 		kde-frameworks/kwindowsystem
-		kde-frameworks/solid
 		media-libs/alsa-lib
 		sys-libs/libstatgrab
 		x11-libs/gsettings-qt
@@ -39,21 +36,13 @@ DEPEND="
 		x11-libs/xcb-util
 		"
 RDEPEND="${DEPEND}"
-BDEPEND=""
-
-src_prepare() {
-	default
-	cmake_src_prepare
-	mkdir build
-}
 
 src_configure() {
-	cd build
+	# qtwebkit is deprecated
 	local mycmakeargs=(
 		-DCALENDAR_PLUGIN=NO
 	)
 	cmake_src_configure
-	S="${S}/build"
 }
 
 pkg_postinst() {
