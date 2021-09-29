@@ -1,7 +1,9 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
+
+inherit qmake-utils
 
 DESCRIPTION="Front of the window switcher in UKUI desktop environment."
 HOMEPAGE="https://github.com/ukui/ukui-window-switch"
@@ -12,21 +14,17 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-		dev-qt/qtcore
-		dev-qt/qtx11extras
-		x11-libs/gsettings-qt
-		x11-libs/gtk+:3
-		x11-libs/libwnck:3
-		"
+	dev-qt/qtcore
+	dev-qt/qtx11extras
+	kde-frameworks/kglobalaccel
+	kde-frameworks/kwayland
+	x11-libs/gsettings-qt
+	x11-libs/libwnck:3
+	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
-
-PATCHES=(
-	"${FILESDIR}/cLinkage.patch"
-)
 
 src_configure() {
-	qmake PREFIX=/usr
+	eqmake5 PREFIX=/usr
 }
 
 src_compile() {
