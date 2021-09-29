@@ -14,28 +14,31 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-		dev-qt/qtx11extras
-		gnome-base/dconf
-		x11-libs/gsettings-qt
-		x11-libs/libXtst"
+	dev-qt/linguist-tools
+	dev-qt/qtdbus
+	dev-qt/qtsvg
+	dev-qt/qtxml
+	dev-qt/qtx11extras
+	dev-qt/qtwidgets
+	media-libs/opencv
+	x11-libs/gsettings-qt
+	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-CMAKE_IN_SOURCE_BUILD="yes"
-
 src_prepare() {
-	default
-	cp /etc/pam.d/login ${S}/data/ukui-screensaver-qt
-	mkdir build
-	BUILD_DIR="${S}/build"
+	#According to https://github.com/ukui/ukui-screensaver/issues/65, but depending on distro
+	cp /etc/pam.d/login ${S}/data/ukui-screensaver-qt || die
 	cmake_src_prepare
 }
 
 src_configure() {
-	cd build
-	pwd
-	cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
-	S="${S}/build"
+	cmake \
+		-S ${CMAKE_USE_DIR} \
+		-B ${BUILD_DIR} \
+		-DCMAKE_BUILD_TYPE="Release" \
+		-DCMAKE_INSTALL_PREFIX=/usr
+	S="${BUILD_DIR}"
 }
 
 src_compile() {
