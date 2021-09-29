@@ -1,0 +1,17 @@
+diff --git a/src/notifymanager.h b/src/notifymanager.h
+index 8547f79..46dc0f6 100644
+--- a/src/notifymanager.h
++++ b/src/notifymanager.h
+@@ -22,11 +22,9 @@
+ #undef signals
+ #endif
+ 
+-extern "C" {
+ #include <dconf/dconf.h>
+ #include <canberra.h>
+ #include <gio/gio.h>
+-}
+ 
+ #include <QWidget>
+ #include <QObject>
+

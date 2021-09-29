@@ -14,15 +14,17 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-		dev-libs/glib
-		dev-qt/qtcore
-		dev-qt/qtsvg
-		gnome-base/dconf
-		x11-libs/gsettings-qt
-		x11-libs/libX11
-		"
+	dev-qt/qtsvg
+	dev-qt/qtdbus
+	dev-qt/qtsql
+	media-libs/libcanberra
+	x11-libs/gsettings-qt
+	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+
+PATCHES=(
+	"${FILESDIR}/cLinkage.patch"
+)
 
 src_prepare() {
 	eqmake5
