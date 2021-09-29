@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit gnome2-utils qmake-utils xdg-utils
+inherit gnome2-utils qmake-utils xdg
 
 DESCRIPTION="media tools for UKUI"
 HOMEPAGE="https://github.com/ukui/ukui-media"
@@ -33,6 +33,8 @@ BDEPEND=""
 src_prepare() {
 	NOCONFIGURE=1 ./autogen.sh || die
 	default
+	# QA issuse
+	sed -i 's/OnlyShowIn=UKUI/OnlyShowIn=X-UKUI/g' "${S}/data/ukui-volume-control.desktop.in.in"
 }
 
 src_configure() {
@@ -50,6 +52,8 @@ src_install() {
 	emake DESTDIR="${D}" install
 	cd ukui-volume-control-applet-qt || die
 	emake INSTALL_ROOT="${D}" install
+	mv "${D}/usr/share/ukui-media/org.ukui.audio.gschema.xml" "${D}/usr/share/glib-2.0/schemas" || die
+	mv "${D}/usr/share/ukui-media/org.ukui.sound.gschema.xml" "${D}/usr/share/glib-2.0/schemas" || die
 }
 
 pkg_postinst() {
