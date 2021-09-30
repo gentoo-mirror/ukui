@@ -11,7 +11,7 @@ You can add this overlay and then emerge ukui-meta package to use a mininal UKUI
 ### Base
 
 - [x] peony
-- [ ] peony-extensions
+- [X] peony-extensions
 - [x] ukui-menu
 - [x] ukui-panel
 - [x] ukui-sidebar
@@ -22,7 +22,7 @@ You can add this overlay and then emerge ukui-meta package to use a mininal UKUI
 - [x] ukui-control-center
 - [x] ukui-settings-deamon
 - [x] ukui-power-manager
-- [ ] kylin-nm
+- [X] kylin-nm
 - [x] ukui-biometric-auth
 - [x] ukui-kwin
 - [x] ukui-window-switch
@@ -35,21 +35,8 @@ You can add this overlay and then emerge ukui-meta package to use a mininal UKUI
 - [x] ukui-interface
 - [ ] kylin-display-switch
 - [x] ukui-notification-daemon
-- [ ] ukui-biometric-manager
+- [X] ukui-biometric-manager
 - [x] ukui-system-monitor
-- [ ] libinput-touch-translator
-- [ ] biometric-authentication
+- [X] libinput-touch-translator
+- [X] biometric-authentication
 
-## Extra packages from Ubuntu Kylin
-
-来自 Ubuntu kylin 的部分软件
-
-### Core
-
-- [ ] youker-assistant
-- [ ] kylin-burner
-
-### Extra
-
-- [ ] kylin-video
-- [ ] indicator-china-weather
