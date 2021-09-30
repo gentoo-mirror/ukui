@@ -13,8 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="
-	dev-qt/linguist-tools
+CDEPEND="
 	dev-qt/qdbus
 	dev-qt/qtcore
 	dev-qt/qtwidgets
@@ -22,6 +21,11 @@ DEPEND="
 	sys-libs/pam
 	sys-auth/polkit-qt
 	"
-RDEPEND="${DEPEND}"
-BDEPEND=""
 
+DEPEND="
+	${CDEPEND}
+	dev-qt/linguist-tools
+	"
+RDEPEND="
+	${CDEPEND}
+	"

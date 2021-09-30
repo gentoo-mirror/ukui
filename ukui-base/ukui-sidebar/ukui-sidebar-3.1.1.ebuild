@@ -32,7 +32,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-
 src_configure() {
 	eqmake5 PREFIX=/usr
 }

@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
-	dev-libs/iniparser
+	dev-libs/iniparser:4
 	dev-qt/qtcore
 	virtual/libcrypt
 	"
@@ -57,4 +57,3 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_schemas_update
 }
-

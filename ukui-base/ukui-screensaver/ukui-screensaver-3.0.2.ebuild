@@ -28,14 +28,14 @@ BDEPEND=""
 
 src_prepare() {
 	#According to https://github.com/ukui/ukui-screensaver/issues/65, but depending on distro
-	cp /etc/pam.d/login ${S}/data/ukui-screensaver-qt || die
+	cp /etc/pam.d/login "${S}/data/ukui-screensaver-qt" || die
 	cmake_src_prepare
 }
 
 src_configure() {
 	cmake \
-		-S ${CMAKE_USE_DIR} \
-		-B ${BUILD_DIR} \
+		-S "${CMAKE_USE_DIR}" \
+		-B "${BUILD_DIR}" \
 		-DCMAKE_BUILD_TYPE="Release" \
 		-DCMAKE_INSTALL_PREFIX=/usr
 	S="${BUILD_DIR}"

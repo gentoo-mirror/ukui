@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="
+CDEPEND="
 	app-i18n/uchardet
 	dev-qt/linguist-tools
 	dev-qt/qtcore
@@ -26,7 +26,11 @@ DEPEND="
 	x11-libs/bamf
 	x11-libs/gsettings-qt
 	"
-RDEPEND="${DEPEND}"
+DEPEND="
+	${CDEPEND}
+	dev-qt/linguist-tools
+	"
+RDEPEND="${CDEPEND}"
 
 src_prepare() {
 	eqmake5

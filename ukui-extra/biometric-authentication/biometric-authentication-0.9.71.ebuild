@@ -17,9 +17,9 @@ DEPEND="
 	dev-db/sqlite
 	dev-libs/glib
 	x11-libs/gtk+:3
-	sys-auth/libfprint
+	sys-auth/libfprint:2
 	sys-auth/polkit[gtk]
-	dev-libs/libusb
+	virtual/libusb:1
 	"
 RDEPEND="${DEPEND}
 	dev-python/dbus-python

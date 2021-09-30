@@ -26,4 +26,3 @@ RDEPEND="${DEPEND}
 	!ukui/ukui-biometric-auth
 	ukui-extra/biometric-authentication
 	"
-
