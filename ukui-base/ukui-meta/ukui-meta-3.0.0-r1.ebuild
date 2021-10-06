@@ -30,9 +30,5 @@ RDEPEND="
 		x11-themes/ukui-themes
 		x11-themes/ukui-wallpapers
 		"
-
-# waiting for tags
-# ukui-base/kylin-nm
-
 # waiting for port
 # ukui-panel plugin calendar

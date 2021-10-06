@@ -8,4 +8,7 @@
 		<email>OriPoin@outlook.com</email>
 	<name>Yachen Wang</name>
 	</maintainer>
+	<use>
+		<flag name="multimedia">Runtime-only dependency for effect video playback</flag>
+	</use>
 </pkgmetadata>

@@ -15,7 +15,6 @@ KEYWORDS="~amd64"
 
 CDEPEND="
 	app-i18n/uchardet
-	dev-qt/linguist-tools
 	dev-qt/qtcore
 	dev-qt/qtdbus
 	dev-qt/qtsql
@@ -26,10 +25,8 @@ CDEPEND="
 	x11-libs/bamf
 	x11-libs/gsettings-qt
 	"
-DEPEND="
-	${CDEPEND}
-	dev-qt/linguist-tools
-	"
+DEPEND="dev-qt/linguist-tools
+	${CDEPEND}"
 RDEPEND="${CDEPEND}"
 
 src_prepare() {

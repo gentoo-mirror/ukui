@@ -14,15 +14,15 @@ HOMEPAGE="https://launchpad.net/bamf"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://git.launchpad.net/bamf"
-	KEYWORDS=""
 else
-	SRC_URI="${HOMEPAGE}/0.5/${PV}/+download/${P}.tar.xz"
+	SRC_URI="https://launchpad.net/bamf/0.5/${PV}/+download/${P}.tar.xz"
 	KEYWORDS="~amd64"
 fi
 
 LICENSE="LGPL-3"
 SLOT="0"
 IUSE="doc +dbus +introspection test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="
 	dev-libs/glib:2

@@ -22,7 +22,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	qmake
+	eqmake5
 }
 
 src_compile() {

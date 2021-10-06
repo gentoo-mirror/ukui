@@ -13,8 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="
-	dev-qt/linguist-tools
+CDEPEND="
 	dev-qt/qtdbus
 	dev-qt/qtsvg
 	dev-qt/qtxml
@@ -23,8 +22,9 @@ DEPEND="
 	media-libs/opencv
 	x11-libs/gsettings-qt
 	"
-RDEPEND="${DEPEND}"
-BDEPEND=""
+DEPEND="dev-qt/linguist-tools
+	${CDEPEND}"
+RDEPEND="${CDEPEND}"
 
 src_prepare() {
 	#According to https://github.com/ukui/ukui-screensaver/issues/65, but depending on distro

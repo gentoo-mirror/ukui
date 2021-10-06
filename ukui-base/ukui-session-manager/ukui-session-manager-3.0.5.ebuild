@@ -5,7 +5,7 @@ EAPI=7
 
 inherit gnome2-utils cmake
 
-DESCRIPTION="ukui-session-manager"
+DESCRIPTION="Session manager of the UKUI desktop environment"
 HOMEPAGE="https://github.com/ukui/ukui-session-manager"
 SRC_URI="https://github.com/ukui/ukui-session-manager/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

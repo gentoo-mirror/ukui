@@ -23,6 +23,6 @@ DEPEND="
 	x11-libs/gsettings-qt
 	"
 RDEPEND="${DEPEND}
-	!ukui/ukui-biometric-auth
+	!ukui-base/ukui-biometric-auth
 	ukui-extra/biometric-authentication
 	"

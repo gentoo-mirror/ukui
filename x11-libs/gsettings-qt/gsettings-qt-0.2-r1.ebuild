@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit qmake-utils eutils
+inherit qmake-utils
 
 DESCRIPTION="Qml bindings for GSettings."
 HOMEPAGE="https://launchpad.net/gsettings-qt"
@@ -19,9 +19,11 @@ DEPEND="dev-libs/glib:2
 		dev-qt/qtcore:5
 		dev-qt/qtdeclarative:5
 		test? ( dev-qt/qttest:5 )"
+RESTRICT="!test? ( test )"
 
 unset QT_QPA_PLATFORMTHEME
 S="${WORKDIR}/${PN}-v${PV}"
+
 PATCHDIR="${WORKDIR}/debian/patches"
 PATCHES=(
 	"${PATCHDIR}/0001_Fix-link-path-error.patch"

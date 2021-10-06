@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="
-	dev-qt/linguist-tools
+CDEPEND="
 	dev-qt/qtcore
 	dev-qt/qtdbus
 	dev-qt/qtwidgets
@@ -26,7 +25,9 @@ DEPEND="
 	x11-apps/xrandr
 	x11-misc/lightdm[qt5]
 	"
-RDEPEND="${DEPEND}"
+DEPEND="dev-qt/linguist-tools
+	${CDEPEND}"
+RDEPEND="${CDEPEND}"
 
 src_prepare() {
 	eqmake5

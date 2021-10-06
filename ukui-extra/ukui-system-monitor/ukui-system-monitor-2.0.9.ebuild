@@ -12,6 +12,7 @@ SRC_URI="https://github.com/ukui/ukui-system-monitor/archive/v${PV}.tar.gz -> ${
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="+systemd"
 
 DEPEND="
 	dev-libs/glib
@@ -24,11 +25,10 @@ DEPEND="
 	kde-frameworks/kwindowsystem
 	net-libs/libpcap
 	x11-libs/gsettings-qt
-	sys-apps/systemd
 	ukui-base/ukui-interface
+	systemd? ( sys-apps/systemd )
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 PATCHES=(
 	"${FILESDIR}/HeaderMissing.patch"

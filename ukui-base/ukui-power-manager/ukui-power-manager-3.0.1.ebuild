@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit gnome2-utils xdg autotools
+inherit gnome2-utils xdg
 
 DESCRIPTION="UKUI session daemon that acts as a policy agent on top of UPower"
 HOMEPAGE="https://github.com/ukui/ukui-power-manager"

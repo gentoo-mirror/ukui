@@ -21,8 +21,7 @@ DEPEND="
 	x11-libs/gsettings-qt
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
-
+RESTRICT="!test? ( test )"
 src_prepare() {
 	eqmake5
 	default
