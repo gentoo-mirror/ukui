@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install
+DEPEND=dev-qt/qtcore dev-qt/qtgui kde-frameworks/kxmlgui
+DESCRIPTION=Map actions in touch screen and touchpad to keyboard shortcuts
+EAPI=8
+HOMEPAGE=https://github.com/ukui/libinput-touch-translator
+INHERIT=qmake-utils
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore dev-qt/qtgui kde-frameworks/kxmlgui
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/ukui/libinput-touch-translator/archive/v1.0.0.tar.gz -> libinput-touch-translator-1.0.0.tar.gz
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	qmake-utils	f5eb2f69fffe94292aaaf802fb21c8d1
+_md5_=1fea6d22dc2b69655e53612653b06db1

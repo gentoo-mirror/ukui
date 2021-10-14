@@ -1,0 +1,15 @@
+BDEPEND=app-arch/xz-utils
+DEFINED_PHASES=compile configure install prepare
+DEPEND=dev-libs/glib dev-libs/libgcrypt dev-util/gtk-doc-am dev-util/intltool virtual/pkgconfig
+DESCRIPTION=keep password and other secrets for users.(deprecated)
+EAPI=8
+HOMEPAGE=https://gitlab.gnome.org/GNOME/libgnome-keyring
+INHERIT=gnome.org
+IUSE=debug +introspection
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=introspection? ( dev-libs/gobject-introspection ) gnome-base/gnome-keyring sys-apps/dbus
+SLOT=0
+SRC_URI=mirror://gnome/sources/libgnome-keyring/3.12/libgnome-keyring-3.12.0.tar.xz
+_eclasses_=gnome.org	b5c48cddff1da36a205d924d722b28c9
+_md5_=c9a1cf39b31979a0a6f425df9decaa72

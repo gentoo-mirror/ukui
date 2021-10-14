@@ -1,0 +1,30 @@
+gnome-base/libgnome-keyring 3.12.0-r1: keep password and other secrets for users.(deprecated)
+ukui-base/kylin-nm 3.0.2: Kylin network monitor used in ubuntu-kylin operation system
+ukui-base/peony 3.2.3: The File Manager Application of UKUI.
+ukui-base/peony-extensions 3.2.3: Set of extensions for Peony, the UKUI file manager.
+ukui-base/ukui-biometric-auth 1.2.2: biometric authentication ui of UKUI
+ukui-base/ukui-control-center 3.0.2-r2: media tools for UKUI
+ukui-base/ukui-interface 1.0.1: ukui interface
+ukui-base/ukui-media 3.0.3.1: media tools for UKUI
+ukui-base/ukui-menu 3.0.2: An advanced menu for UKUI
+ukui-base/ukui-meta 3.0.0-r1: UKUI desktop environment(meta package)
+ukui-base/ukui-panel 3.0.5: The taskbar of UKUI
+ukui-base/ukui-power-manager 3.0.1: UKUI session daemon that acts as a policy agent on top of UPower
+ukui-base/ukui-screensaver 3.0.2: Screensaver for UKUI desktop environment
+ukui-base/ukui-session-manager 3.0.5: Session manager of the UKUI desktop environment
+ukui-base/ukui-settings-daemon 3.0.3-r1: Daemon in the UKUI desktop environment
+ukui-base/ukui-sidebar 3.1.1: provide notification center and cutting board on sidebar
+ukui-base/ukui-window-switch 3.0.1: Front of the window switcher in UKUI desktop environment.
+ukui-extra/biometric-authentication 0.9.71: A biometric identification framework for UKUI
+ukui-extra/kylin-display-switch 3.0.13: gui display output swtich tool
+ukui-extra/libinput-touch-translator 1.0.0: Map actions in touch screen and touchpad to keyboard shortcuts
+ukui-extra/ukui-biometric-manager 1.2.2: Manager for biometric authentication
+ukui-extra/ukui-system-monitor 2.0.9: UKUI System Monitor
+x11-libs/bamf 0.5.5: BAMF Application Matching Framework
+x11-libs/gsettings-qt 0.2-r1: Qml bindings for GSettings.
+x11-misc/ukui-greeter 3.0.2: The greeter for UKUI.
+x11-misc/ukui-notification-daemon 1.0.3: UKUI Notification daemon
+x11-themes/qt5-ukui-platformtheme 1.0.7: The UKUI platform theme for qt5 QPA.
+x11-themes/ukui-themes 3.0.1-r1: The theme collections of UKUI.
+x11-themes/ukui-wallpapers 20.04.2-r1: some wallpapers of ubuntukylin-wallpapers
+x11-wm/ukui-kwin 1.0.0: The window manager for UKUI desktop environment.

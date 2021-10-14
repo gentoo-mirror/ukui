@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install
+DEPEND=dev-qt/qtcore kde-frameworks/kwindowsystem kde-plasma/kscreen x11-libs/gsettings-qt
+DESCRIPTION=gui display output swtich tool
+EAPI=8
+HOMEPAGE=https://github.com/ukui/kylin-display-switch
+INHERIT=qmake-utils
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore kde-frameworks/kwindowsystem kde-plasma/kscreen x11-libs/gsettings-qt
+SLOT=0
+SRC_URI=https://github.com/ukui/kylin-display-switch/archive/v3.0.13.tar.gz -> kylin-display-switch-3.0.13.tar.gz
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	4b66d835ec72e021e359bb81eacfe988	qmake-utils	f5eb2f69fffe94292aaaf802fb21c8d1
+_md5_=f4445357dfad9c1e507a32d4694ae662

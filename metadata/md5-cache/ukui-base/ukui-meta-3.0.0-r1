@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=UKUI desktop environment(meta package)
+EAPI=7
+HOMEPAGE=https://www.ukui.org/
+KEYWORDS=~amd64
+LICENSE=metapackage
+RDEPEND=ukui-base/peony ukui-base/ukui-control-center ukui-base/ukui-biometric-auth ukui-base/ukui-media ukui-base/ukui-menu ukui-base/ukui-panel ukui-base/ukui-power-manager ukui-base/ukui-screensaver ukui-base/ukui-session-manager ukui-base/ukui-settings-daemon ukui-base/ukui-sidebar ukui-base/ukui-window-switch x11-misc/ukui-greeter x11-wm/ukui-kwin x11-themes/qt5-ukui-platformtheme x11-themes/ukui-themes x11-themes/ukui-wallpapers
+SLOT=0
+_md5_=4482070b8a4873c3b24db2c7ce2371e7
