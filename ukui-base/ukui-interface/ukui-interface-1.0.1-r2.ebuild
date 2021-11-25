@@ -17,6 +17,7 @@ DEPEND="
 	dev-libs/iniparser:4
 	dev-qt/qtcore
 	virtual/libcrypt
+	x11-libs/gsettings-qt
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
