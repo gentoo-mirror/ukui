@@ -27,4 +27,4 @@ x11-misc/ukui-notification-daemon 1.0.3: UKUI Notification daemon
 x11-themes/qt5-ukui-platformtheme 1.0.7: The UKUI platform theme for qt5 QPA.
 x11-themes/ukui-themes 3.0.1-r1: The theme collections of UKUI.
 x11-themes/ukui-wallpapers 20.04.2-r1: some wallpapers of ubuntukylin-wallpapers
-x11-wm/ukui-kwin 1.0.0: The window manager for UKUI desktop environment.
+x11-wm/ukui-kwin 1.0.0-r1: The window manager for UKUI desktop environment.
