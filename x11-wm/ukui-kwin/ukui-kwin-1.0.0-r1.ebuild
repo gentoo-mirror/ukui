@@ -53,6 +53,7 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	"${FILESDIR}/requestShowWindowMenu_deprecated.patch"
 	"${FILESDIR}/plugins_kdecorations_ukui_test.patch"
+	"${FILESDIR}/5.23.pacth"
 )
 
 src_configure() {
