@@ -1,0 +1,92 @@
+diff --git a/decorations/decorationbridge.h b/decorations/decorationbridge.h
+index 6f51a3f..80c30f8 100644
+--- a/decorations/decorationbridge.h
++++ b/decorations/decorationbridge.h
+@@ -61,7 +61,7 @@ public:
+ 
+     std::unique_ptr<KDecoration2::DecoratedClientPrivate> createClient(KDecoration2::DecoratedClient *client, KDecoration2::Decoration *decoration) override;
+     std::unique_ptr<KDecoration2::DecorationSettingsPrivate> settings(KDecoration2::DecorationSettings *parent) override;
+-    void update(KDecoration2::Decoration *decoration, const QRect &geometry) override;
++    void update(KDecoration2::Decoration *decoration, const QRect &geometry);
+ 
+     bool needsBlur() const {
+         return m_blur;
+diff --git a/effects.cpp b/effects.cpp
+index 9f765aa..bd2fad6 100644
+--- a/effects.cpp
++++ b/effects.cpp
+@@ -86,7 +86,7 @@ static QByteArray readWindowProperty(xcb_window_t win, xcb_atom_t atom, xcb_atom
+     }
+ }
+ 
+-static void deleteWindowProperty(Window win, long int atom)
++static void deleteWindowProperty(xcb_window_t win, long int atom)
+ {
+     if (win == XCB_WINDOW_NONE) {
+         return;
+diff --git a/kcmkwin/kwindecoration/declarative-plugin/previewbridge.h b/kcmkwin/kwindecoration/declarative-plugin/previewbridge.h
+index 7e1d8f3..7666dfb 100644
+--- a/kcmkwin/kwindecoration/declarative-plugin/previewbridge.h
++++ b/kcmkwin/kwindecoration/declarative-plugin/previewbridge.h
+@@ -47,7 +47,7 @@ public:
+     explicit PreviewBridge(QObject *parent = nullptr);
+     ~PreviewBridge() override;
+     std::unique_ptr<DecoratedClientPrivate> createClient(DecoratedClient *client, Decoration *decoration) override;
+-    void update(Decoration* decoration, const QRect& geometry) override;
++    void update(Decoration* decoration, const QRect& geometry);
+     std::unique_ptr<DecorationSettingsPrivate> settings(DecorationSettings *parent) override;
+ 
+     PreviewClient *lastCreatedClient() {
+diff --git a/plugins/platforms/x11/common/eglonxbackend.h b/plugins/platforms/x11/common/eglonxbackend.h
+index bd9c69b..72ebb68 100644
+--- a/plugins/platforms/x11/common/eglonxbackend.h
++++ b/plugins/platforms/x11/common/eglonxbackend.h
+@@ -30,6 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ #include <xcb/xcb.h>
+ 
++#include <X11/Xlib-xcb.h>
++#include <fixx11h.h>
++
+ namespace KWin
+ {
+ 
+diff --git a/plugins/platforms/x11/standalone/x11_platform.h b/plugins/platforms/x11/standalone/x11_platform.h
+index 5b75af3..9456341 100644
+--- a/plugins/platforms/x11/standalone/x11_platform.h
++++ b/plugins/platforms/x11/standalone/x11_platform.h
+@@ -33,6 +33,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ #include <memory>
+ 
++#include <X11/Xlib-xcb.h>
++#include <fixx11h.h>
++
+ namespace KWin
+ {
+ class SyncFilter;
+diff --git a/plugins/platforms/x11/windowed/x11windowed_backend.cpp b/plugins/platforms/x11/windowed/x11windowed_backend.cpp
+index be48ca2..caf026c 100644
+--- a/plugins/platforms/x11/windowed/x11windowed_backend.cpp
++++ b/plugins/platforms/x11/windowed/x11windowed_backend.cpp
+@@ -45,6 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ // system
+ #include <linux/input.h>
+ #include <X11/Xlib-xcb.h>
++#include <X11/keysym.h>
+ 
+ namespace KWin
+ {
+diff --git a/workspace.cpp b/workspace.cpp
+index 2c682af..7172771 100644
+--- a/workspace.cpp
++++ b/workspace.cpp
+@@ -455,7 +455,7 @@ void Workspace::initWithX11()
+     }
+ 
+     // TODO: better value
+-    rootInfo->setActiveWindow(None);
++    rootInfo->setActiveWindow(XCB_WINDOW_NONE);
+     focusToNull();
+ 
+     if (!qApp->isSessionRestored())
