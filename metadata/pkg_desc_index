@@ -19,6 +19,7 @@ ukui-extra/biometric-authentication 0.9.71: A biometric identification framework
 ukui-extra/kylin-display-switch 3.0.13: gui display output swtich tool
 ukui-extra/libinput-touch-translator 1.0.0: Map actions in touch screen and touchpad to keyboard shortcuts
 ukui-extra/ukui-biometric-manager 1.2.2: Manager for biometric authentication
+ukui-extra/ukui-shutdown-timer 1.1.0: time-shutdown
 ukui-extra/ukui-system-monitor 2.0.9: UKUI System Monitor
 x11-libs/bamf 0.5.5: BAMF Application Matching Framework
 x11-libs/gsettings-qt 0.2-r1: Qml bindings for GSettings.
