@@ -8,7 +8,7 @@ ukui-base/ukui-interface 1.0.1-r3: ukui interface
 ukui-base/ukui-media 3.0.4: media tools for UKUI
 ukui-base/ukui-menu 3.0.3: An advanced menu for UKUI
 ukui-base/ukui-meta 3.0.0-r1: UKUI desktop environment(meta package)
-ukui-base/ukui-panel 3.0.5: The taskbar of UKUI
+ukui-base/ukui-panel 3.0.6.3: The taskbar of UKUI
 ukui-base/ukui-power-manager 3.1.1: UKUI session daemon that acts as a policy agent on top of UPower
 ukui-base/ukui-screensaver 3.0.2: Screensaver for UKUI desktop environment
 ukui-base/ukui-session-manager 3.0.5: Session manager of the UKUI desktop environment
