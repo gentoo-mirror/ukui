@@ -13,12 +13,13 @@ ukui-base/ukui-power-manager 3.1.1: UKUI session daemon that acts as a policy ag
 ukui-base/ukui-screensaver 3.0.2: Screensaver for UKUI desktop environment
 ukui-base/ukui-session-manager 3.0.5: Session manager of the UKUI desktop environment
 ukui-base/ukui-settings-daemon 3.1.1: Daemon in the UKUI desktop environment
-ukui-base/ukui-sidebar 3.1.1: provide notification center and cutting board on sidebar
+ukui-base/ukui-sidebar 3.1.2: provide notification center and cutting board on sidebar
 ukui-base/ukui-window-switch 3.0.1: Front of the window switcher in UKUI desktop environment.
 ukui-extra/biometric-authentication 0.9.71: A biometric identification framework for UKUI
 ukui-extra/kylin-display-switch 3.0.13: gui display output swtich tool
 ukui-extra/libinput-touch-translator 1.0.0: Map actions in touch screen and touchpad to keyboard shortcuts
 ukui-extra/ukui-biometric-manager 1.2.2: Manager for biometric authentication
+ukui-extra/ukui-notebook 3.1.1: ukui-notebook
 ukui-extra/ukui-shutdown-timer 1.1.0: time-shutdown
 ukui-extra/ukui-system-monitor 2.0.9: UKUI System Monitor
 x11-libs/bamf 0.5.5: BAMF Application Matching Framework
