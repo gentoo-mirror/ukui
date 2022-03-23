@@ -49,6 +49,8 @@ src_install() {
 	emake DESTDIR="${D}" install
 	cd src/log4qt || die
 	emake INSTALL_ROOT="${D}" install
+	mkdir "${D}/usr/include/ukuisdk"
+	mv "${D}"/usr/include/kylin* "${D}/usr/include/ukuisdk"
 }
 
 pkg_postinst() {
