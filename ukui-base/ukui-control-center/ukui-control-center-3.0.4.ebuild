@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -14,12 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="
+	dev-libs/libpwquality
 	dev-libs/libxml2
+	app-misc/ddcutil
 	dev-qt/qtsvg
 	dev-qt/qtwidgets
 	dev-qt/qtx11extras
 	dev-qt/qtmultimedia
 	gnome-base/dconf
+	kde-frameworks/bluez-qt
 	kde-frameworks/kconfig
 	kde-frameworks/kconfigwidgets
 	kde-frameworks/kdeclarative
@@ -29,6 +32,7 @@ DEPEND="
 	media-libs/libcanberra
 	media-libs/libmatemixer
 	media-sound/pulseaudio
+	virtual/libcrypt
 	x11-libs/gsettings-qt
 	"
 RDEPEND="${DEPEND}
@@ -41,9 +45,9 @@ RDEPEND="${DEPEND}
 	sys-apps/edid-decode
 	"
 
-PATCHES=(
-	"${FILESDIR}/cLinkage.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/cLinkage.patch"
+#)
 
 src_prepare() {
 	eqmake5 PREFIX=/usr
