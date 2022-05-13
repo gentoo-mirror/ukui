@@ -17,8 +17,8 @@ DEPEND="
 		app-misc/geoclue
 		dev-libs/libgudev
 		dev-libs/wayland
-		dev-qt/qtcore
 		dev-qt/qtchooser
+		dev-qt/qtcore
 		dev-qt/qtsensors
 		dev-qt/qtsvg
 		dev-qt/qtx11extras
@@ -27,7 +27,7 @@ DEPEND="
 		kde-frameworks/kconfig
 		mate-base/libmatekbd
 		mate-base/mate-desktop
-		media-libs/libcanberra[gtk,gtk3]
+		media-libs/libcanberra[gtk2,gtk3]
 		media-libs/lcms
 		media-libs/libmatemixer
 		media-libs/imlib2
