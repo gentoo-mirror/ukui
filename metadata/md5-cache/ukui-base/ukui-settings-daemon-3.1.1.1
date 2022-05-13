@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm preinst prepare
+DEPEND=app-misc/geoclue dev-libs/libgudev dev-libs/wayland dev-qt/qtchooser dev-qt/qtcore dev-qt/qtsensors dev-qt/qtsvg dev-qt/qtx11extras dev-util/intltool gnome-base/gnome-desktop kde-frameworks/kconfig mate-base/libmatekbd mate-base/mate-desktop media-libs/libcanberra[gtk2,gtk3] media-libs/lcms media-libs/libmatemixer media-libs/imlib2 media-sound/pulseaudio x11-base/xorg-server x11-misc/colord x11-libs/gsettings-qt x11-libs/libnotify x11-libs/libwnck:3 x11-libs/libxklavier x11-libs/libXtst dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=Daemon in the UKUI desktop environment
+EAPI=7
+HOMEPAGE=https://github.com/ukui/ukui-settings-daemon
+INHERIT=gnome2-utils xdg qmake-utils
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=x11-misc/imwheel mate-base/mate-common ukui-base/ukui-biometric-auth x11-base/xorg-drivers[input_devices_synaptics] dev-libs/glib
+SLOT=0
+SRC_URI=https://github.com/ukui/ukui-settings-daemon/archive/v3.1.1.1.tar.gz -> ukui-settings-daemon-3.1.1.1.tar.gz
+_eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857	qmake-utils	59420c906278d16deaaa629f9d115707
+_md5_=5226d434e136f02b1e4732ad22a480b4

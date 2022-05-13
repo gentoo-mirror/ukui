@@ -12,7 +12,7 @@ ukui-base/ukui-panel 3.0.6.4: The taskbar of UKUI
 ukui-base/ukui-power-manager 3.1.1: UKUI session daemon that acts as a policy agent on top of UPower
 ukui-base/ukui-screensaver 3.0.2: Screensaver for UKUI desktop environment
 ukui-base/ukui-session-manager 3.0.5: Session manager of the UKUI desktop environment
-ukui-base/ukui-settings-daemon 3.1.1: Daemon in the UKUI desktop environment
+ukui-base/ukui-settings-daemon 3.1.1.1: Daemon in the UKUI desktop environment
 ukui-base/ukui-sidebar 3.1.2: provide notification center and cutting board on sidebar
 ukui-base/ukui-window-switch 3.0.1: Front of the window switcher in UKUI desktop environment.
 ukui-extra/biometric-authentication 0.9.71: A biometric identification framework for UKUI
@@ -29,4 +29,4 @@ x11-misc/ukui-notification-daemon 1.0.3: UKUI Notification daemon
 x11-themes/qt5-ukui-platformtheme 1.0.8: The UKUI platform theme for qt5 QPA.
 x11-themes/ukui-themes 3.0.1-r1: The theme collections of UKUI.
 x11-themes/ukui-wallpapers 20.04.2-r1: some wallpapers of ubuntukylin-wallpapers
-x11-wm/ukui-kwin 1.0.0-r1: The window manager for UKUI desktop environment.
+x11-wm/ukui-kwin 1.0.0-r2: The window manager for UKUI desktop environment.
