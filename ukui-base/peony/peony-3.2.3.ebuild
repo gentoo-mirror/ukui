@@ -16,7 +16,6 @@ KEYWORDS="~amd64"
 DEPEND="
 		app-text/poppler[qt5]
 		dev-libs/glib
-		dev-qt/qtchooser
 		dev-qt/qtcore
 		dev-qt/qtx11extras
 		gnome-base/gvfs
