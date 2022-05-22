@@ -68,5 +68,5 @@ src_configure() {
 src_install() {
 	cmake_src_install "$@"
 	#conflict with kwin
-	rm "${D}/usr/share/locale/tr/LC_MESSAGES/kwin.mo"
+	rm "${D}/usr/share/locale/tr/LC_MESSAGES/kwin.mo" || die
 }
