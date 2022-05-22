@@ -40,7 +40,7 @@ src_prepare() {
 	eapply_user
 	default
 	# QA issue
-	sed -i 's/OnlyShowIn=UKUI/OnlyShowIn=X-UKUI/g' "${S}/data/ukui-power-preferences.desktop.in.in"
+	sed -i 's/OnlyShowIn=UKUI/OnlyShowIn=X-UKUI/g' "${S}/data/ukui-power-preferences.desktop.in.in" || die
 }
 
 src_configure() {
