@@ -45,10 +45,6 @@ RDEPEND="${DEPEND}
 	sys-apps/edid-decode
 	"
 
-#PATCHES=(
-#	"${FILESDIR}/cLinkage.patch"
-#)
-
 src_prepare() {
 	eqmake5 PREFIX=/usr
 	default
