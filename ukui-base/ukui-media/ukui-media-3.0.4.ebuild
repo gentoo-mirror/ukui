@@ -34,7 +34,7 @@ src_prepare() {
 	NOCONFIGURE=1 ./autogen.sh || die
 	default
 	# QA issuse
-	sed -i 's/OnlyShowIn=UKUI/OnlyShowIn=X-UKUI/g' "${S}/data/ukui-volume-control.desktop.in.in"
+	sed -i 's,OnlyShowIn=UKUI,OnlyShowIn=X-UKUI,g' "${S}/data/ukui-volume-control.desktop.in.in" || die
 }
 
 src_configure() {
