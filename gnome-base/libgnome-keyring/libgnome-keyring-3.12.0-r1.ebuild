@@ -30,7 +30,7 @@ BDEPEND=""
 
 src_prepare() {
 	eapply_user
-	NOCONFIGURE=1 ./autogen.sh
+	NOCONFIGURE=1 ./autogen.sh || die
 }
 
 src_configure() {

@@ -26,11 +26,11 @@ src_prepare() {
 	default
 	eautoreconf
 	#iniparser: lose version
-	sed -i "s/iniparser\/iniparser/iniparser4\/iniparser/g" "${S}/src/common/kylin-com4c.c"
-	sed -i "s/iniparser\/iniparser/iniparser4\/iniparser/g" "${S}/src/common/kylin-com4cxx.cpp"
-	sed -i "s/liniparser/liniparser4/g" "${S}/src/common/Makefile.am"
+	sed -i "s,iniparser/iniparser,iniparser4/iniparser,g" "${S}/src/common/kylin-com4c.c" || die
+	sed -i "s,iniparser/iniparser,iniparser4/iniparser,g" "${S}/src/common/kylin-com4cxx.cpp" || die
+	sed -i "s,liniparser,liniparser4,g" "${S}/src/common/Makefile.am" || die
 	# lib location
-	sed -i 's/usr\/lib/usr\/lib64/g' "${S}/src/log4qt/ukui-log4qt.pro"
+	sed -i 's,usr/lib,usr/lib64,g' "${S}/src/log4qt/ukui-log4qt.pro" || die
 }
 
 src_configure() {
@@ -49,8 +49,8 @@ src_install() {
 	emake DESTDIR="${D}" install
 	cd src/log4qt || die
 	emake INSTALL_ROOT="${D}" install
-	mkdir "${D}/usr/include/ukuisdk"
-	mv "${D}"/usr/include/kylin* "${D}/usr/include/ukuisdk"
+	mkdir "${D}/usr/include/ukuisdk" || die
+	mv "${D}"/usr/include/kylin* "${D}/usr/include/ukuisdk" || die
 }
 
 pkg_postinst() {
