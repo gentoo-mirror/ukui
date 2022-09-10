@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare
+DEPEND=dev-libs/glib dev-libs/libqtxdg dev-qt/qtcore dev-qt/qtconcurrent dev-qt/qtgui dev-qt/qtmultimedia dev-qt/qtprintsupport dev-qt/qtsql dev-qt/qtsvg dev-qt/qtx11extras gnome-base/dconf kde-frameworks/kwindowsystem x11-libs/gsettings-qt x11-libs/libXinerama ukui-base/ukui-interface dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=provide notification center and cutting board on sidebar
+EAPI=7
+HOMEPAGE=https://github.com/ukui/ukui-sidebar
+INHERIT=qmake-utils gnome2-utils xdg
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-libs/glib dev-libs/libqtxdg dev-qt/qtcore dev-qt/qtconcurrent dev-qt/qtgui dev-qt/qtmultimedia dev-qt/qtprintsupport dev-qt/qtsql dev-qt/qtsvg dev-qt/qtx11extras gnome-base/dconf kde-frameworks/kwindowsystem x11-libs/gsettings-qt x11-libs/libXinerama ukui-base/ukui-interface
+SLOT=0
+SRC_URI=https://github.com/ukui/ukui-sidebar/archive/v3.1.2.tar.gz -> ukui-sidebar-3.1.2.tar.gz
+_eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857	qmake-utils	59420c906278d16deaaa629f9d115707
+_md5_=7f1a9c30f2c81524bea9033ebfbc9e1f
