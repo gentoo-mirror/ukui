@@ -18,7 +18,6 @@ DEPEND="
 	app-text/yelp-tools
 	dev-qt/qtx11extras
 	dev-util/intltool
-	gnome-base/libgnome-keyring
 	kde-frameworks/kwindowsystem
 	mate-base/mate-common
 	media-libs/libcanberra[gtk3]

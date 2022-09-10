@@ -15,6 +15,7 @@ KEYWORDS="~amd64"
 
 DEPEND="
 	dev-libs/glib
+	dev-libs/libqtxdg
 	dev-qt/qtcore
 	dev-qt/qtconcurrent
 	dev-qt/qtgui

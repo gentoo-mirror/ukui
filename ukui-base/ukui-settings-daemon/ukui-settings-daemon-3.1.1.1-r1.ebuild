@@ -23,7 +23,7 @@ DEPEND="
 		dev-qt/qtsvg
 		dev-qt/qtx11extras
 		dev-util/intltool
-		gnome-base/gnome-desktop
+		gnome-base/gnome-desktop:3
 		kde-frameworks/kconfig
 		mate-base/libmatekbd
 		mate-base/mate-desktop
