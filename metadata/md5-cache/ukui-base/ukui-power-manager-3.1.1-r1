@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-auth/polkit sys-apps/dbus[X] || ( x11-misc/ukui-notification-daemon x11-misc/notification-daemon x11-misc/mate-notification-daemon ) || ( sys-apps/systemd sys-auth/elogind )
 SLOT=0
 SRC_URI=https://github.com/ukui/ukui-power-manager/archive/v3.1.1.tar.gz -> ukui-power-manager-3.1.1.tar.gz
-_eclasses_=toolchain-funcs	cf009a3ed4e5bef503e7a9f215791a78	multilib	5ca4e49abed8e3a2f7b56920eadee157	xdg-utils	ac0e315a3688929e34ac75b139e7349a	gnome2-utils	3eaa1386ddbbbbb3951256d4b170fba3	xdg	6024fbc93167fad782e2032933654857	qmake-utils	59420c906278d16deaaa629f9d115707
+_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	xdg-utils	ac0e315a3688929e34ac75b139e7349a	gnome2-utils	3eaa1386ddbbbbb3951256d4b170fba3	xdg	6024fbc93167fad782e2032933654857	qmake-utils	59420c906278d16deaaa629f9d115707
 _md5_=07dde70ce0f11262d3d66d7adc76a135
