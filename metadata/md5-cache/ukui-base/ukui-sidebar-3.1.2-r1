@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/glib dev-libs/libqtxdg dev-qt/qtcore dev-qt/qtconcurrent dev-qt/qtgui dev-qt/qtmultimedia dev-qt/qtprintsupport dev-qt/qtsql dev-qt/qtsvg dev-qt/qtx11extras gnome-base/dconf kde-frameworks/kwindowsystem x11-libs/gsettings-qt x11-libs/libXinerama ukui-base/ukui-interface
 SLOT=0
 SRC_URI=https://github.com/ukui/ukui-sidebar/archive/v3.1.2.tar.gz -> ukui-sidebar-3.1.2.tar.gz
-_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	qmake-utils	59420c906278d16deaaa629f9d115707	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	b0183db3b2e07b18f3b77bffec72e116	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	qmake-utils	dc3c4c93818f11a547a93d71d3f180f1	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	b0183db3b2e07b18f3b77bffec72e116	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=7f1a9c30f2c81524bea9033ebfbc9e1f
