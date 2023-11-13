@@ -10,5 +10,5 @@ LICENSE=GPL-3
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gsettings-qt/0.2-1/gsettings-qt_0.2.orig.tar.gz -> gsettings-qt-0.2.tar.gz https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/gsettings-qt/0.2-1/gsettings-qt_0.2-1.debian.tar.xz
-_eclasses_=toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
+_eclasses_=toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
 _md5_=5e197e8c9808228cd2a14b7c5af7630b
